@@ -288,6 +288,15 @@ button {
   font-weight: 700;
 }
 
+.highlight {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 8px;
+  background: #f8edc6;
+  color: #6f5400;
+  font-weight: 800;
+}
+
 .timeline-content ul,
 .support-card ul {
   margin: 0;
