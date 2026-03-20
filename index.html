@@ -8,7 +8,6 @@
   <meta name="theme-color" content="#c45f3e">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://dhdnjswnd.github.io/Useful_Info/">
-
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="Useful_Info">
@@ -16,12 +15,10 @@
   <meta property="og:description" content="예정일, 거주 지역, 혼인신고 여부를 고르면 출산 지원 일정과 신청 주체를 자동으로 정리합니다.">
   <meta property="og:url" content="https://dhdnjswnd.github.io/Useful_Info/">
   <meta property="og:image" content="https://dhdnjswnd.github.io/Useful_Info/og-image.svg">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="출산 지원 타임라인 생성기">
   <meta name="twitter:description" content="예정일, 거주 지역, 혼인신고 여부로 자동 생성되는 출산 지원 타임라인">
   <meta name="twitter:image" content="https://dhdnjswnd.github.io/Useful_Info/og-image.svg">
-
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -29,7 +26,7 @@
     <section class="hero">
       <p class="eyebrow">Useful Info</p>
       <h1>출산 지원 타임라인 생성기</h1>
-      <p class="intro">출산 예정일, 거주 지역, 혼인신고 여부를 선택하면 신청 시점, 신청 주체, 마감일, 주요 지원 내용을 한 번에 정리합니다. 현재는 `화성시`, `수원시`, `성남시`, `용인시`, `서울특별시`를 반영한 버전입니다.</p>
+      <p class="intro">출산 예정일, 거주 지역, 혼인신고 여부를 선택하면 신청 시점, 신청 주체, 마감일, 주요 지원 내용을 한 번에 정리합니다. 현재는 화성시, 수원시, 성남시, 용인시, 서울특별시를 반영한 버전입니다.</p>
     </section>
 
     <section class="layout">
@@ -89,7 +86,7 @@
 
         <label>
           <span>추가 메모</span>
-          <textarea id="notes" rows="4" placeholder="예: 화성시 180일 거주요건 이미 충족, 출생신고는 엄마가 할 예정"></textarea>
+          <textarea id="notes" rows="4" placeholder="예: 출생신고는 엄마가 할 예정, 거주요건 충족 완료"></textarea>
         </label>
 
         <button type="submit">타임라인 생성</button>
@@ -109,7 +106,14 @@
           <h2 class="result-title"></h2>
           <p class="result-subtitle"></p>
         </div>
-        <div class="chips"></div>
+        <div class="hero-side">
+          <div class="chips"></div>
+          <div class="toolbar">
+            <button type="button" class="tool-button" data-action="copy-link">공유 링크 복사</button>
+            <button type="button" class="tool-button secondary" data-action="print">PDF 저장</button>
+          </div>
+          <p class="tool-status" aria-live="polite"></p>
+        </div>
       </header>
 
       <section class="summary-grid"></section>
