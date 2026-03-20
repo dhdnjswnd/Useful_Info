@@ -2,12 +2,31 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>시점별 신청주체 행동표</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>화성시 출산 지원 타임라인 | 2026년 6월 23일 예정</title>
+  <meta name="description" content="2026년 6월 23일 출산 예정 기준으로 정리한 화성시 출산 지원 타임라인. 시점별 할 일, 신청 주체, 마감일, 주요 지원 내용을 한눈에 볼 수 있습니다.">
+  <meta name="theme-color" content="#c45f3e">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://dhdnjswnd.github.io/Useful_Info/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="Useful_Info">
+  <meta property="og:title" content="화성시 출산 지원 타임라인">
+  <meta property="og:description" content="출생신고, 부모급여, 아동수당, 첫만남이용권, 화성시 출산지원금과 산후조리비까지 시점별로 정리한 공유용 안내 페이지.">
+  <meta property="og:url" content="https://dhdnjswnd.github.io/Useful_Info/">
+  <meta property="og:image" content="https://dhdnjswnd.github.io/Useful_Info/og-image.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="화성시 출산 지원 타임라인">
+  <meta name="twitter:description" content="2026년 6월 23일 출산 예정 기준 지원 일정과 신청 주체 정리">
+  <meta name="twitter:image" content="https://dhdnjswnd.github.io/Useful_Info/og-image.svg">
+
   <style>
     :root {
       --bg: #f4eee5;
-      --paper: #fffdfa;
+      --paper: rgba(255, 253, 250, 0.96);
+      --paper-2: #fff8ef;
       --ink: #1f2a2d;
       --muted: #5f696d;
       --line: #ddd2c2;
@@ -17,56 +36,129 @@
       --cool-soft: #dceee9;
       --gold: #b28612;
       --gold-soft: #f9edc7;
+      --shadow: 0 16px 40px rgba(56, 49, 40, 0.08);
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at top left, rgba(196,95,62,0.10), transparent 22%),
-        radial-gradient(circle at bottom right, rgba(47,109,103,0.10), transparent 20%),
-        var(--bg);
       color: var(--ink);
       font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(196, 95, 62, 0.10), transparent 22%),
+        radial-gradient(circle at bottom right, rgba(47, 109, 103, 0.10), transparent 20%),
+        var(--bg);
     }
+
+    a { color: inherit; }
+
     .page {
       max-width: 1120px;
-      margin: 28px auto;
-      padding: 20px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
     }
-    .hero, .item, .summary {
+
+    .hero,
+    .item,
+    .support,
+    .summary {
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 24px;
-      box-shadow: 0 16px 40px rgba(56, 49, 40, 0.08);
+      box-shadow: var(--shadow);
     }
+
     .hero {
-      padding: 26px;
+      padding: 28px;
+      background: linear-gradient(135deg, #fff7ef, #fffdfa);
     }
+
+    .eyebrow,
+    .section-label {
+      margin: 0 0 10px;
+      color: var(--warm);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
     h1, h2, h3, p { margin: 0; }
+
     h1 {
-      font-size: 38px;
-      line-height: 1.2;
+      font-size: 42px;
+      line-height: 1.15;
       letter-spacing: -0.04em;
     }
+
     .sub {
-      margin-top: 10px;
+      margin-top: 12px;
+      max-width: 840px;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.7;
     }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
     .callout {
       margin-top: 18px;
       padding: 16px 18px;
       border-radius: 18px;
       border: 1px solid #ecdcc7;
-      background: linear-gradient(135deg, #fff7ef, #fffdfa);
-      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+      font-size: 15px;
     }
-    .timeline {
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: var(--warm);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .section {
       margin-top: 20px;
+    }
+
+    .timeline {
       display: grid;
       gap: 14px;
     }
+
     .item {
       padding: 18px;
       display: grid;
@@ -74,6 +166,7 @@
       gap: 16px;
       align-items: start;
     }
+
     .when {
       border-radius: 18px;
       padding: 16px;
@@ -83,19 +176,23 @@
       border: 1px solid var(--line);
       background: #fff;
     }
-    .when.warm { background: var(--warm-soft); color: #7d301a; }
+
     .when.cool { background: var(--cool-soft); color: #24524d; }
+    .when.warm { background: var(--warm-soft); color: #7d301a; }
     .when.gold { background: var(--gold-soft); color: #6f5400; }
+
     .content h2 {
       font-size: 24px;
       margin-bottom: 10px;
       letter-spacing: -0.03em;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
     }
+
     .cell {
       border: 1px solid #e7ddcf;
       background: #fffcf7;
@@ -103,25 +200,70 @@
       padding: 12px;
       min-height: 108px;
     }
+
     .cell h3 {
-      font-size: 14px;
-      margin-bottom: 8px;
+      margin: 0 0 8px;
       color: var(--muted);
+      font-size: 14px;
     }
+
     .cell p {
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
-    .summary {
-      margin-top: 20px;
+
+    .supports {
+      display: grid;
+      gap: 12px;
+    }
+
+    .support {
       padding: 18px;
     }
+
+    .support h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fbf4ea;
+      border: 1px solid #e9dece;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .support p,
+    .support li {
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .support ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .summary {
+      padding: 18px;
+    }
+
     .summary-grid {
-      margin-top: 12px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
+
     .summary-box {
       border: 1px solid #e7ddcf;
       border-radius: 18px;
@@ -130,143 +272,246 @@
       line-height: 1.8;
       font-size: 14px;
     }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
     @media (max-width: 980px) {
+      h1 { font-size: 34px; }
       .item { grid-template-columns: 1fr; }
       .grid, .summary-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 32px; }
     }
+
     @media print {
       body { background: #fff; }
-      .page { max-width: none; margin: 0; padding: 8mm; }
-      .hero, .item, .summary { box-shadow: none; }
+      .page { max-width: none; padding: 8mm; }
+      .hero, .item, .support, .summary { box-shadow: none; }
+      .toolbar { display: none; }
     }
   </style>
 </head>
 <body>
   <main class="page">
     <section class="hero">
-      <h1>시점별 신청주체 행동표</h1>
-      <p class="sub">2026년 6월 23일 출산 예정, 화성시 거주요건 충족, 혼인신고 미완료 상황을 반영한 실무용 정리.</p>
-      <div class="callout">현재 상황에서는 `엄마가 출생신고와 주요 지원 신청의 중심`, `아빠는 서류 준비·동행·확인 담당`으로 움직이는 것이 가장 안전합니다.</div>
+      <p class="eyebrow">Useful Info</p>
+      <h1>화성시 출산 지원 타임라인</h1>
+      <p class="sub">2026년 6월 23일 출산 예정, 화성시 거주요건 충족, 혼인신고 미완료 상황을 반영한 공유용 안내 페이지입니다. 출생신고부터 부모급여, 아동수당, 첫만남이용권, 화성시 출산지원금과 산후조리비까지 시점별로 정리했습니다.</p>
+      <div class="chips">
+        <span class="chip">예정일 2026-06-23</span>
+        <span class="chip">화성시 거주요건 충족</span>
+        <span class="chip">혼인신고 미완료 반영</span>
+        <span class="chip">모바일 공유용</span>
+      </div>
+      <div class="callout">현재 조건에서는 <strong>엄마가 출생신고와 주요 지원 신청의 중심</strong>이 되는 흐름이 가장 안전합니다. 아빠는 서류 준비, 병원 확인, 주민센터 동행, 접수 결과 확인을 맡는 방식이 실무적으로 가장 매끄럽습니다.</div>
+      <div class="toolbar">
+        <a class="button" href="javascript:window.print()">PDF로 저장</a>
+        <a class="button secondary" href="#supports">지원별 상세 보기</a>
+      </div>
     </section>
 
-    <section class="timeline">
-      <article class="item">
-        <div class="when">지금<br>~ 5월 초</div>
-        <div class="content">
-          <h2>사전 준비</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>카드, 바우처, 로그인, 신분증, 통장사본 준비</p></div>
-            <div class="cell"><h3>누가</h3><p>엄마·아빠 둘 다 가능</p></div>
-            <div class="cell"><h3>어디서</h3><p>집에서 준비, 정부24·복지로 계정 확인</p></div>
-            <div class="cell"><h3>권장</h3><p>출생신고 담당은 엄마로 미리 정함</p></div>
+    <section class="section">
+      <p class="section-label">Timeline</p>
+      <div class="timeline">
+        <article class="item">
+          <div class="when">지금<br>~ 5월 초</div>
+          <div class="content">
+            <h2>사전 준비</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>국민행복카드, 바우처, 정부24·복지로 로그인, 신분증, 통장사본 준비</p></div>
+              <div class="cell"><h3>누가</h3><p>엄마·아빠 둘 다 가능</p></div>
+              <div class="cell"><h3>어디서</h3><p>집에서 준비, 병원과 행정복지센터 동선 확인</p></div>
+              <div class="cell"><h3>권장</h3><p>출생신고 담당은 엄마로 미리 정하고, 입금계좌도 엄마 명의로 준비</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when cool">5월 14일경<br>부터</div>
-        <div class="content">
-          <h2>산모·신생아 건강관리 신청</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>산모·신생아 건강관리 지원 신청</p></div>
-            <div class="cell"><h3>누가</h3><p>산모 본인 권장</p></div>
-            <div class="cell"><h3>어디서</h3><p>행정복지센터 또는 안내된 온라인 경로</p></div>
-            <div class="cell"><h3>마감</h3><p>출산 후 30일 이내, 미리 신청이 안전</p></div>
+        <article class="item">
+          <div class="when cool">5월 14일경<br>부터</div>
+          <div class="content">
+            <h2>산모·신생아 건강관리 지원 신청</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>산모·신생아 건강관리 지원 신청, 업체 일정 검토</p></div>
+              <div class="cell"><h3>누가</h3><p>산모 본인 권장</p></div>
+              <div class="cell"><h3>어디서</h3><p>행정복지센터 또는 안내된 접수 경로</p></div>
+              <div class="cell"><h3>마감</h3><p>출산 후 30일 이내이므로 출산 전 신청이 가장 안전</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when">출산 직전</div>
-        <div class="content">
-          <h2>막달 체크</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>출생증명서 발급 절차 확인, 신청 항목 점검</p></div>
-            <div class="cell"><h3>누가</h3><p>둘 다 가능, 접수 기준은 엄마로 준비</p></div>
-            <div class="cell"><h3>어디서</h3><p>병원, 정부24, 주민센터 준비</p></div>
-            <div class="cell"><h3>권장</h3><p>입금계좌도 엄마 명의로 준비하면 실무가 단순함</p></div>
+        <article class="item">
+          <div class="when">출산 직전</div>
+          <div class="content">
+            <h2>막달 체크</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>출생증명서 발급 절차 확인, 원스톱 신청 항목 최종 점검</p></div>
+              <div class="cell"><h3>누가</h3><p>둘 다 가능, 접수 기준은 엄마 중심으로 준비</p></div>
+              <div class="cell"><h3>어디서</h3><p>병원, 정부24, 주민센터 관련 정보 확인</p></div>
+              <div class="cell"><h3>권장</h3><p>출생 후 바로 갈 주민센터와 필요한 서류를 미리 정리</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when gold">출산 직후<br>최우선</div>
-        <div class="content">
-          <h2>출생신고</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>출생신고</p></div>
-            <div class="cell"><h3>누가</h3><p>혼인 외 출생자는 원칙적으로 엄마</p></div>
-            <div class="cell"><h3>어디서</h3><p>행정복지센터, 시청·구청 등</p></div>
-            <div class="cell"><h3>마감</h3><p>출생 후 1개월 이내</p></div>
+        <article class="item">
+          <div class="when gold">출산 직후<br>최우선</div>
+          <div class="content">
+            <h2>출생신고</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>출생신고</p></div>
+              <div class="cell"><h3>누가</h3><p>혼인신고 미완료 상황에서는 엄마 기준 진행 권장</p></div>
+              <div class="cell"><h3>어디서</h3><p>행정복지센터, 시청·구청 등</p></div>
+              <div class="cell"><h3>마감</h3><p>출생 후 1개월 이내. 늦으면 뒤 지원들도 같이 늦어짐</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when gold">출생신고<br>직후</div>
-        <div class="content">
-          <h2>행복출산 원스톱서비스</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>첫만남이용권, 부모급여, 아동수당, 화성시 지원 동시 신청</p></div>
-            <div class="cell"><h3>누가</h3><p>엄마 권장</p></div>
-            <div class="cell"><h3>어디서</h3><p>출생신고하는 주민센터 또는 연계 온라인</p></div>
-            <div class="cell"><h3>권장</h3><p>출생신고하는 날 같이 접수</p></div>
+        <article class="item">
+          <div class="when gold">출생신고<br>직후</div>
+          <div class="content">
+            <h2>행복출산 원스톱서비스</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>첫만남이용권, 부모급여, 아동수당, 화성시 출산지원금, 산후조리비 동시 점검</p></div>
+              <div class="cell"><h3>누가</h3><p>엄마 권장</p></div>
+              <div class="cell"><h3>어디서</h3><p>출생신고하는 주민센터 또는 연계 온라인</p></div>
+              <div class="cell"><h3>권장</h3><p>출생신고하는 날 바로 묶어서 접수</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when warm">7월 23일<br>전후</div>
-        <div class="content">
-          <h2>30일 마감권</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>산모·신생아 건강관리 지원 최종 확인</p></div>
-            <div class="cell"><h3>누가</h3><p>산모 본인</p></div>
-            <div class="cell"><h3>어디서</h3><p>행정복지센터 또는 보건소 안내 경로</p></div>
-            <div class="cell"><h3>마감</h3><p>실제 출산일 기준 30일</p></div>
+        <article class="item">
+          <div class="when warm">7월 23일<br>전후</div>
+          <div class="content">
+            <h2>30일 마감권</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>산모·신생아 건강관리 지원 최종 확인</p></div>
+              <div class="cell"><h3>누가</h3><p>산모 본인</p></div>
+              <div class="cell"><h3>어디서</h3><p>행정복지센터 또는 보건소 안내 경로</p></div>
+              <div class="cell"><h3>마감</h3><p>실제 출산일 기준 30일. 예정일 기준으로는 2026-07-23 전후</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when warm">8월 21일<br>전후</div>
-        <div class="content">
-          <h2>60일 마감권</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>부모급여, 아동수당 신청 확인</p></div>
-            <div class="cell"><h3>누가</h3><p>실질 보호자, 현재는 엄마가 가장 안전</p></div>
-            <div class="cell"><h3>어디서</h3><p>복지로·정부24 또는 주민센터</p></div>
-            <div class="cell"><h3>마감</h3><p>60일 내 신청해야 출생월 소급에 유리</p></div>
+        <article class="item">
+          <div class="when warm">8월 21일<br>전후</div>
+          <div class="content">
+            <h2>60일 마감권</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>부모급여, 아동수당 신청 여부 재확인</p></div>
+              <div class="cell"><h3>누가</h3><p>실질 보호자, 현재 조건에서는 엄마가 가장 안전</p></div>
+              <div class="cell"><h3>어디서</h3><p>복지로, 정부24 또는 주민센터</p></div>
+              <div class="cell"><h3>마감</h3><p>60일 내 신청해야 출생월 기준 반영에 유리</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="item">
-        <div class="when warm">출생 후<br>1년 이내</div>
-        <div class="content">
-          <h2>화성시 지원 마감권</h2>
-          <div class="grid">
-            <div class="cell"><h3>무엇</h3><p>출산지원금, 산후조리비</p></div>
-            <div class="cell"><h3>누가</h3><p>부 또는 모 가능, 현재는 엄마 권장</p></div>
-            <div class="cell"><h3>어디서</h3><p>행정복지센터, 정부24, 경기민원24</p></div>
-            <div class="cell"><h3>마감</h3><p>2027년 6월 22일 전후</p></div>
+        <article class="item">
+          <div class="when warm">출생 후<br>1년 이내</div>
+          <div class="content">
+            <h2>화성시 지원 마감권</h2>
+            <div class="grid">
+              <div class="cell"><h3>무엇</h3><p>화성시 출산지원금, 화성시 산후조리비</p></div>
+              <div class="cell"><h3>누가</h3><p>부 또는 모 가능하나 현재는 엄마 신청 권장</p></div>
+              <div class="cell"><h3>어디서</h3><p>행정복지센터, 정부24, 경기민원24</p></div>
+              <div class="cell"><h3>마감</h3><p>예정일 기준 2027-06-22 전후</p></div>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
 
-    <section class="summary">
-      <h2>역할 분담 추천</h2>
-      <div class="summary-grid">
-        <div class="summary-box">
-          <strong>엄마가 맡는 것</strong><br>
-          출생신고, 행복출산 원스톱, 부모급여, 아동수당, 첫만남이용권, 화성시 지원 신청
+    <section class="section" id="supports">
+      <p class="section-label">Supports</p>
+      <div class="supports">
+        <article class="support">
+          <h3>부모급여</h3>
+          <div class="meta">
+            <span class="tag">국가 지원</span>
+            <span class="tag">0세 월 100만원, 1세 월 50만원</span>
+            <span class="tag">출생 후 60일 이내 권장</span>
+          </div>
+          <p>0세와 1세 아동 양육을 위한 월 단위 현금성 지원입니다.</p>
+          <ul>
+            <li>현재 조건에서는 엄마 기준 신청이 가장 안전합니다.</li>
+            <li>출생 후 60일 이내 신청해야 출생월 기준 반영에 유리합니다.</li>
+            <li>복지로, 정부24 또는 주민센터에서 신청합니다.</li>
+          </ul>
+        </article>
+
+        <article class="support">
+          <h3>아동수당</h3>
+          <div class="meta">
+            <span class="tag">국가 지원</span>
+            <span class="tag">월 10만원</span>
+            <span class="tag">출생 후 60일 이내 권장</span>
+          </div>
+          <p>만 8세 미만 아동에게 지급되는 기본 수당입니다.</p>
+          <ul>
+            <li>보호자 자격이 애매하면 온라인보다 방문 신청이 단순합니다.</li>
+            <li>출생 직후 부모급여와 같이 챙기는 흐름이 좋습니다.</li>
+          </ul>
+        </article>
+
+        <article class="support">
+          <h3>첫만남이용권</h3>
+          <div class="meta">
+            <span class="tag">국가 지원</span>
+            <span class="tag">첫째 200만원</span>
+            <span class="tag">둘째 이상 300만원</span>
+            <span class="tag">출생 후 2년 이내</span>
+          </div>
+          <p>출생 아동에게 지급되는 바우처 형태 지원입니다.</p>
+          <ul>
+            <li>마감은 2년으로 여유가 있지만 출생 직후 신청하는 편이 실사용에 유리합니다.</li>
+          </ul>
+        </article>
+
+        <article class="support">
+          <h3>화성시 출산지원금</h3>
+          <div class="meta">
+            <span class="tag">화성시 지원</span>
+            <span class="tag">첫째 100만원</span>
+            <span class="tag">둘째·셋째 200만원</span>
+            <span class="tag">넷째 이상 300만원</span>
+          </div>
+          <p>출생 순서와 거주요건에 따라 지급되는 화성시 지원입니다.</p>
+          <ul>
+            <li>현재 입력 기준으로 화성시 거주요건 충족 상태를 전제로 정리했습니다.</li>
+            <li>출생일로부터 1년 이내 신청입니다.</li>
+          </ul>
+        </article>
+
+        <article class="support">
+          <h3>화성시 산후조리비</h3>
+          <div class="meta">
+            <span class="tag">화성시 지원</span>
+            <span class="tag">출생아 1인당 50만원</span>
+            <span class="tag">출생 후 1년 이내</span>
+          </div>
+          <p>출산가정의 산후 회복과 초기 양육 부담을 덜기 위한 화성시 지원입니다.</p>
+          <ul>
+            <li>출생신고와 함께 같이 챙기는 편이 가장 쉽습니다.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Roles</p>
+      <div class="summary">
+        <div class="summary-grid">
+          <div class="summary-box">
+            <strong>엄마가 맡는 것</strong><br>
+            출생신고, 행복출산 원스톱, 부모급여, 아동수당, 첫만남이용권, 화성시 지원 신청
+          </div>
+          <div class="summary-box">
+            <strong>아빠가 맡는 것</strong><br>
+            서류 준비, 병원 확인, 주민센터 동행, 접수 결과 확인, 추가 문의
+          </div>
         </div>
-        <div class="summary-box">
-          <strong>아빠가 맡는 것</strong><br>
-          서류 챙기기, 병원 확인, 주민센터 동행, 문의전화, 접수 결과 확인
-        </div>
+        <p class="footer-note">이 페이지는 공유용 정리본입니다. 실제 신청 시점에는 주소지 행정복지센터, 정부24, 복지로의 최신 안내를 한 번 더 확인하는 것이 안전합니다.</p>
       </div>
     </section>
   </main>
